@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery of Lalibela</title>
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5DC; /* Beige */
+  color: #4B2E00; /* Dark Brown */
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #C19A6B; /* Light Brown */
+}
+
+nav a {
+  margin: 0 15px;
+  color: #4B2E00; /* Dark Brown */
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: #F5F5DC; /* Beige */
+  padding: 10px 0;
+  color: #4B2E00; /* Dark Brown */
+}
+
+h1, h2 {
+  color: #4B2E00; /* Dark Brown */
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .mySlides {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Image Gallery of Lalibela</h1>
+    <nav>
+      <a href="index.html">Welcome</a> |
+      <a href="learn-more.html">Learn More</a> |
+      <a href="image-gallery.html">Image Gallery</a> |
+      <a href="multimedia.html">Multimedia</a> |
+      <a href="user-design-page.html">Contact & Feedback</a>
+    </nav>
+    
+    
+  </header>
+  <main>
+    <section id="image-gallery">
+      <h1>Image Gallery of Lalibela</h1>
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <img src="lalibela1.jpg" alt="Lalibela1">
+        </div>
+        <div class="mySlides">
+          <img src="lalibela2.jpg" alt="Lalibela2">
+        </div>
+        <div class="mySlides">
+          <img src="lalibela3.jpg" alt="Lalibela3">
+        </div>
+        <div class="mySlides">
+          <img src="lalibela4.jpg" alt="Lalibela4">
+        </div>
+        <div class="mySlides">
+          <img src="lalibela5.jpg" alt="Lalibela5">
+        </div>
+        <div class="mySlides">
+          <img src="lalibela6.jpg" alt="Lalibela6">
+        </div>
+        <div class="mySlides">
+          <img src="lalibela7.jpg" alt="Lalibela7">
+        </div>
+        <div class="mySlides">
+          <img src="lalibela8.jpg" alt="Lalibela8">
+        </div>
+        <div class="mySlides">
+          <img src="lalibela9.jpg" alt="Lalibela9">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 The Amazing Church - Lalibela
+  </footer>
+  
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let i;
+      const slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+</html>
